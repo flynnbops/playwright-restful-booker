@@ -1,0 +1,13 @@
+{
+  "name": "playwright-restful-booker",
+  "version": "1.0.0",
+  "description": "Playwright tests written against the Restful Booker platform.",
+  "main": "index.js",
+  "scripts": {},
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.39.0",
+    "@types/node": "^20.9.0"
+  }
+}

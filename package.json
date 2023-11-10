@@ -3,7 +3,12 @@
   "version": "1.0.0",
   "description": "Playwright tests written against the Restful Booker platform.",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test:dev:wip": "npx playwright test tests-rbp/ --grep @wip --project=dev",
+    "test:dev:all": "npx playwright test tests-rbp/ --project=dev",
+    "test:staging:wip": "npx playwright test tests-rbp/ --grep @wip --project=staging",
+    "test:staging:all": "npx playwright test tests-rbp/ --project=staging"
+  },
   "author": "",
   "license": "ISC",
   "devDependencies": {

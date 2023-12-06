@@ -73,6 +73,14 @@ export default defineConfig({
         ...devices['Desktop Chrome']
       },
     },
+    { // Run Safari mobile local dev env
+      name: 'dev',
+      retries: 1,
+      use: { 
+        baseURL: baseEnvUrl.dev.ui,
+          ...devices['iPhone 13'],
+      },
+    },
     { // Run against "staging"
       name: 'staging',
       retries: 0,

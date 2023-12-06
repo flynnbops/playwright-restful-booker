@@ -25,6 +25,10 @@ The tests contained within are for learning more about the test framework. As su
 - To run them against your local env use `npm run test:dev:wip`
 - To run them against "staging" env use `npm run test:staging:wip`
 
+#### Run tests in UI mode
+- To run them against your local env use `npm run test:dev:all:ui`
+- To run them against "staging" env use `npm run test:staging:all:ui`
+
 ## Test coverage
 TBD
 

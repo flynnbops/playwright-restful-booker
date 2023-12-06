@@ -7,8 +7,14 @@ test('RBP homepage title is correct', async ({ page }) => {
   await expect(page).toHaveTitle(/Restful-booker-platform demo/);
 });
 
-test('@wip RBP homepage title is correct', async ({ page }) => {
+test('Rooms are visible', async ({ page }) => {
   await page.goto('');
 
   await expect(page.getByText('Rooms', {exact: true})).toBeVisible();
+});
+
+test('Admin page can be reached', async ({ page }) => {
+  await page.goto('/#/admin');
+
+  await expect(page.getByTestId('login-header')).toBeVisible();
 });

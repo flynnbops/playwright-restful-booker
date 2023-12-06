@@ -12,12 +12,13 @@ The tests contained within are for learning more about the test framework. As su
     - TDLR: Install Node and Playwright
 - [Build Restful Booker][4] locally
     - Once you've built it all once it'll spin up again more quickly 
-    - You can build and run via Docker, after that initial build (Docker image relies on built artefacts)
+    - You can build and run via Docker, after that initial build (Docker image relies on built artifacts)
         - Bring up the containers `cd [path to your local RBP repo] && docker-compose up -d`
         - Shut down when you're finished `docker-compose down`
 
 ## Framework
 - Github Action manually disabled. If you fork this project it will run automatically.
+- To [upgrade Playwright][7] run `npm install -D @playwright/test@latest`
 
 ### Run tests
 
@@ -25,7 +26,7 @@ The tests contained within are for learning more about the test framework. As su
 - To run them against your local env use `npm run test:dev:wip`
 - To run them against "staging" env use `npm run test:staging:wip`
 
-#### Run tests in UI mode
+#### UI mode
 - To run them against your local env use `npm run test:dev:all:ui`
 - To run them against "staging" env use `npm run test:staging:all:ui`
 
@@ -35,6 +36,7 @@ TBD
 <!-- Playwright Links -->
 [1]: https://playwright.dev/
 [3]: https://playwright.dev/docs/intro
+[7]: https://playwright.dev/docs/intro#updating-playwright
 <!-- RBP Links -->
 [2]: https://github.com/mwinteringham/restful-booker-platform
 [4]: https://github.com/mwinteringham/restful-booker-platform#building-locally

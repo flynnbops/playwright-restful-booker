@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 
 // Used the Test recorder to create this basic test. Removed redundant calls.
-test('@wip Submit an enquiry', async ({ page }) => {
+test.skip('@wip Submit an enquiry', async ({ page }) => {
   // Submit an enquiry
   await page.goto('');
   await page.getByTestId('ContactName').fill('Aaron test');

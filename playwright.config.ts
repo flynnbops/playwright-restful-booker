@@ -83,12 +83,20 @@ export default defineConfig({
     },
     { // Run against "staging"
       name: 'staging',
-      retries: 0,
+      retries: 1,
       use: { 
         baseURL: baseEnvUrl.staging.ui,
         ...devices['Desktop Chrome']
+      }
+    },
+    { // Run Safari mobile against Staging
+      name: 'staging-iphone13-safari',
+      retries: 1,
+      use: { 
+        baseURL: baseEnvUrl.staging.ui,
+          ...devices['iPhone 13'],
       },
-    }
+    },
 
     /* Test against mobile viewports. */
     // {

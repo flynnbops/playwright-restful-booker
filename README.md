@@ -15,7 +15,7 @@ The tests contained within are for learning more about the test framework. As su
     - You can build and run via Docker, after that initial build (Docker image relies on built artifacts)
         - Bring up the containers `cd [path to your local RBP repo] && docker-compose up -d`
         - Shut down when you're finished `docker-compose down`
-- To speed things up for me, I've pushed tagged versions of the images I've build to my own [Docker Hub profile][7]. You can try these to bring up the application without building the images yourself. With `docker-compose up -d`
+- To speed things up for me, I've pushed tagged versions of the images I've build to my own [Docker Hub profile][8]. You can try these to bring up the application without building the images yourself. With `docker-compose up -d`
 
 ## Framework
 - Github Action manually disabled. If you fork this project it will run automatically.
@@ -49,4 +49,4 @@ TBD
 [5]: https://automationintesting.online/
 [6]: https://www.postman.com/automation-in-testing/workspace/restful-booker-collections/overview
 <!-- Other Links -->
-[7]: https://hub.docker.com/u/flynnbops
+[8]: https://hub.docker.com/u/flynnbops

@@ -1,0 +1,48 @@
+version: '3.7'
+services:
+  rbp-booking:
+    image: flynnbops/rbp_booking:latest
+    ports:
+      - "3000:3000"
+    restart: always
+  rbp-room:
+    image: flynnbops/rbp_room:latest
+    ports:
+      - "3001:3001"
+    restart: always
+  rbp-branding:
+    image: flynnbops/rbp_branding:latest
+    ports:
+      - "3002:3002"
+    restart: always
+  rbp-assets:
+    image: flynnbops/rbp_assets:latest
+    ports:
+      - "3003:3003"
+    restart: always
+  rbp-auth:
+    image: flynnbops/rbp_auth:latest
+    ports:
+      - "3004:3004"
+    restart: always
+  rbp-report:
+    image: flynnbops/rbp_report:latest
+    ports:
+      - "3005:3005"
+    restart: always
+  rbp-message:
+    image: flynnbops/rbp_message:latest
+    ports:
+      - "3006:3006"
+    restart: always
+  rbp-proxy:
+    image: flynnbops/rbp_proxy:latest
+    ports:
+      - "80:80"
+    restart: always
+  playwright:
+    build: 
+      context: ./tests
+      dockerfile: Dockerfile
+    volumes:
+      - ./tests:/tests

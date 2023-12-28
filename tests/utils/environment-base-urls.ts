@@ -1,6 +1,6 @@
 export default{
     dev: {
-        ui: 'http://localhost:80'
+        ui: 'http://rbp-proxy'
     },
     staging: {
         ui: 'https://automationintesting.online'

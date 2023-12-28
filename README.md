@@ -15,20 +15,26 @@ The tests contained within are for learning more about the test framework. As su
     - You can build and run via Docker, after that initial build (Docker image relies on built artifacts)
         - Bring up the containers `cd [path to your local RBP repo] && docker-compose up -d`
         - Shut down when you're finished `docker-compose down`
+- To speed things up for me, I've pushed tagged versions of the images I've build to my own [Docker Hub profile][7]. You can try these to bring up the application without building the images yourself. With `docker-compose up -d`
 
 ## Framework
 - Github Action manually disabled. If you fork this project it will run automatically.
 - To [upgrade Playwright][7] run `npm install -D @playwright/test@latest`
 
 ### Run tests
+Tests can be run locally or via `docker-compose`
 
-#### @WIP
-- To run them against your local env use `npm run test:dev:wip`
-- To run them against "staging" env use `npm run test:staging:wip`
+#### Against local dev
+- Make sure the [env is up and running](README.md#setup)
 
-#### UI mode
-- To run them against your local env use `npm run test:dev:all:ui`
-- To run them against "staging" env use `npm run test:staging:all:ui`
+Assuming we want to run tests as part of `docker-compose`
+- To run some tests against your local env use `docker-compose run playwright npm run test:dev:all`
+
+#### Against staging
+We may want to run the tests from our local machine or via `docker-compose`. The difference here being we do not control the staging env.
+
+- To run tests from your local machine against "staging" env use `npm run test:staging:all`
+- To run tests using `docker-compose` against "staging" use `docker-compose run playwright npm run test:dev:all`
 
 ## Test coverage
 TBD
@@ -42,3 +48,5 @@ TBD
 [4]: https://github.com/mwinteringham/restful-booker-platform#building-locally
 [5]: https://automationintesting.online/
 [6]: https://www.postman.com/automation-in-testing/workspace/restful-booker-collections/overview
+<!-- Other Links -->
+[7]: https://hub.docker.com/u/flynnbops
